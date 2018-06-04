@@ -603,7 +603,7 @@ public class OknoProgramu extends javax.swing.JFrame {
                 jToggleZasilanieActionPerformed(evt);
             }
         });
-        jPanel6.add(jToggleZasilanie, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 70, 120, 30));
+        jPanel6.add(jToggleZasilanie, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 60, 120, 50));
 
         jLabel29.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabel29.setForeground(new java.awt.Color(51, 51, 51));
@@ -1085,6 +1085,8 @@ public class OknoProgramu extends javax.swing.JFrame {
         //funkcja wczytuje dane do Labeli. Cała konwersja dokonywana jest tutaj.
 
         wysOsob.setText(Integer.toString(stan.iloscOsobWBudynku));
+        zadaneIloscOsob.setValue(stan.iloscOsobWBudynku);
+        
         wysTemp.setText(Integer.toString(stan.tempPowietrza) + "℃");
         wysWlamania.setText(Integer.toString(stan.iloscWlaman));
         
