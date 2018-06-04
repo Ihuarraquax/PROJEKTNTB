@@ -71,6 +71,7 @@ public class OknoProgramu extends javax.swing.JFrame {
         wysWlamania = new javax.swing.JLabel();
         wysTylneDrzwi = new javax.swing.JLabel();
         wysGaraz = new javax.swing.JLabel();
+        jLabelZuzycieEnergii = new javax.swing.JLabel();
         wysZuzycieEnergii = new javax.swing.JProgressBar();
         jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -268,6 +269,11 @@ public class OknoProgramu extends javax.swing.JFrame {
         wysGaraz.setText("jLabel2");
         jPanel5.add(wysGaraz);
         wysGaraz.setBounds(130, 190, 100, 15);
+
+        jLabelZuzycieEnergii.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelZuzycieEnergii.setText("jLabel16");
+        jPanel5.add(jLabelZuzycieEnergii);
+        jLabelZuzycieEnergii.setBounds(50, 270, 200, 20);
 
         wysZuzycieEnergii.setMaximum(77);
         jPanel5.add(wysZuzycieEnergii);
@@ -1032,6 +1038,7 @@ public class OknoProgramu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabelZuzycieEnergii;
     private javax.swing.JList<String> jListUsterki;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -1080,6 +1087,10 @@ public class OknoProgramu extends javax.swing.JFrame {
         wysOsob.setText(Integer.toString(stan.iloscOsobWBudynku));
         wysTemp.setText(Integer.toString(stan.tempPowietrza) + "℃");
         wysWlamania.setText(Integer.toString(stan.iloscWlaman));
+        
+        
+        
+        
         //Drzwi główne
         if (stan.stDrzwi) {
             wysGlowneDrzwi.setText("OTWARTE");
@@ -1112,6 +1123,7 @@ public class OknoProgramu extends javax.swing.JFrame {
 //////////////////////////////////////
         //Zuzycie energii
         wysZuzycieEnergii.setValue(stan.zuzycieEnergi);
+        jLabelZuzycieEnergii.setText(Integer.toString(stan.zuzycieEnergi)+" kWh");
         //
 
         //
